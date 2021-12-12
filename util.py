@@ -25,14 +25,14 @@ def gram_matrix(x):
     return gram
     
 
-# ??? why implement in this way
+# reference: https://en.wikipedia.org/wiki/Total_variation_denoising
 def total_variance(img):
     """
     get the L1 loss of total variance loss
     :param img: tensor of shape(B,C,H,W)
     :return: a scalar, total variance loss
     """
-    torch.sum(torch.abs(img[:,:,1:,:] - img[:,:,:-1,:])) + torch.sum(torch.abs(img[:,:,:,1:] - img[:,:,:,:-1]))
+    return torch.sum(torch.abs(img[:,:,1:,:] - img[:,:,:-1,:])) + torch.sum(torch.abs(img[:,:,:,1:] - img[:,:,:,:-1]))
 
 
 
