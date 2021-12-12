@@ -131,9 +131,9 @@ def save_paint_plot(st, ct, ot, path):
     :param ot: output_image in torch tensor
     :param path: oriented path to save the image
     """
-    st_img = ImageProcess.torchTensorToImage(st)
-    ct_img = ImageProcess.torchTensorToImage(ct[0])
-    ot_img = ImageProcess.torchTensorToImage(ot[0])
+    st_img = torchTensorToImage(st)
+    ct_img = torchTensorToImage(ct[0])
+    ot_img = torchTensorToImage(ot[0])
     print(type(st_img))
 
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, dpi=100, figsize=(10, 4))
