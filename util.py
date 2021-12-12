@@ -13,7 +13,7 @@ norm_std = [0.229, 0.224, 0.225]
 
 # this function is from official pytroch website:
 # https://github.com/pytorch/examples/blob/0.4/fast_neural_style/neural_style/utils.py#L21-L26
-def gram_matrix(x):
+def gram_matrix(y):
     """
     :param x: torch tensor
     :return: the gram matrix of x
